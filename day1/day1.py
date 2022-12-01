@@ -4,7 +4,6 @@ f.close()
 
 rawStrings = sr.split("\n")
 
-#part 1:
 calorieList = []
 calorieElf = []
 
@@ -14,13 +13,14 @@ for a in rawStrings:
         calorieElf = []
     else:
         calorieElf.append(int(a))
-
-for x in range (len(calorieList)):
-    calorieList[x] = sum(calorieList[x])
     
-calorieList.sort()
-print("Value of elf with most amount of calories:", calorieList[-1])
+result = map(sum, calorieList)
+    
+result = list(result)
 
-#part 2:
-topThreeValue = calorieList[-1] + calorieList[-2] + calorieList[-3]
+result.sort()
+
+print("Value of elf with most amount of calories:", result[-1])
+
+topThreeValue = result[-1] + result[-2] + result[-3]
 print("Calories carried by the top three elves in total:", topThreeValue)
