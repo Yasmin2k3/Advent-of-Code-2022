@@ -16,10 +16,7 @@ for a in rawStrings:
         calorieElf.append(int(a))
 
 for x in range (len(calorieList)):
-    totalCalorie = 0
-    for y in calorieList[x]:
-        totalCalorie += y
-    calorieList[x] = totalCalorie
+    calorieList[x] = sum(calorieList[x])
     
 calorieList.sort()
 print("Value of elf with most amount of calories:", calorieList[-1])
