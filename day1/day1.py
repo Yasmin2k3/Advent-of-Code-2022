@@ -14,10 +14,7 @@ for a in rawStrings:
     else:
         calorieElf.append(int(a))
     
-result = map(sum, calorieList)
-    
-result = list(result)
-
+result = list(map(sum, calorieList))
 result.sort()
 
 print("Value of elf with most amount of calories:", result[-1])
