@@ -3,14 +3,9 @@ def splitString(value):
     return string1, string2
 
 def priority(char):
-    LOWERCASE = "abcdefghijklmnopqrstuvwxyz"
-    UPPERCASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
     itemValue = []
-    
-    if char.isupper():
-        itemValue.append(UPPERCASE.index(char) + 27)
-    else:
-        itemValue.append(LOWERCASE.index(char) + 1)
+    itemValue.append(letters.index(char) + 1)
     
     return sum(itemValue)
 
