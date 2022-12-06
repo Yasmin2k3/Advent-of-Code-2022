@@ -5,16 +5,15 @@ def repetition(x):
             return False
     return True
 
+def bufferCheck(l, n):
+    for i in range (0, len(l)):
+        buffer = l[i:i+n]
+        if repetition(buffer):
+            return i+n
+
+
 with open('input.txt', "r") as f:
     data = f.read().strip()
     
-    for i in range (0, len(data)):
-        buffer = data[i:i+4]
-        if repetition(buffer):
-            print("star 1:", i+4)
-            break
-    for y in range (0, len(data)):
-        messageBuffer = data[y:y+14]
-        if repetition(messageBuffer):
-            print("star 2:", y + 14)
-            break
+    print("star 1:", bufferCheck(data, 4))
+    print("star 1:", bufferCheck(data, 14))
