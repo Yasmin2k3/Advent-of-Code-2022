@@ -16,4 +16,4 @@ with open('input.txt', "r") as f:
     data = f.read().strip()
     
     print("star 1:", bufferCheck(data, 4))
-    print("star 1:", bufferCheck(data, 14))
+    print("star 2:", bufferCheck(data, 14))
